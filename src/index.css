@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.layout{
+  height: 100vh;
+  
+}
+
+header,
+footer{
+  background-color: rgb(23, 49, 72);
+  color: azure;
+}
+
+header{
+  height: 5%;
+}
+
+footer{
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+a {
+  color: azure;
+  text-decoration: none;
+  
+}
+
+main{
+  background-color: rgb(51, 90, 121);
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  color: azure;
+}
