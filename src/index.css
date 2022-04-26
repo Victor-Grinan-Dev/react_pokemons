@@ -26,6 +26,15 @@ footer{
 header{
   height: 5%;
 }
+.home{
+  width:100%;
+  background-image: url("./assests/poke-title.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+
+}
+
 
 footer{
   height: 15%;
@@ -59,13 +68,15 @@ main{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   color: azure;
 }
 
 .all-pokes{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .poke-card{
@@ -81,6 +92,11 @@ main{
   padding-bottom: 10px;
   padding-top: 10px;
   margin: 10px;
+}
+
+.poke-card:hover{
+  box-shadow: 0px 0px 10px rgb(215, 248, 211);
+  transform: scale();
 }
 .poke-image{
   background-color: black;

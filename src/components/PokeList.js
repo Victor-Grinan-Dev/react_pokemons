@@ -2,7 +2,10 @@
 import React, { Component } from 'react'
 import PokeCard from './PokeCard'
 
-let amount= 100;
+let amount= 10;
+if (amount > 655){
+    amount = 655;
+}
 const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
 
 class PokeList extends Component {
@@ -12,7 +15,7 @@ class PokeList extends Component {
     }
 
     componentDidMount(){
-        this.setState({isLoading: true});
+        this.setState({isLoading: true})
         fetch(url)
         .then((res) => res.json())
         .then((data) => {
@@ -20,7 +23,6 @@ class PokeList extends Component {
             return fetch(p.url).then((res) => res.json())
         });
         Promise.all(fetches).then((res)=>{
-            console.log(res);
             this.setState({data: res, isLoading: false});
             });
         });
@@ -43,4 +45,6 @@ class PokeList extends Component {
     
     export default PokeList;
 
-    //p.sprites.front_default
+    //p.sprites.other.dream_world.front_default
+    //p.sprites.version["generation-v"]["black-white"].animated.front_default//gif
+    //p.sprites.versions["generation-v"]["black-white"].animated.back_default
