@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 function PokeList() {
   return (
     <div>
-        <Link to="/pokesingle">some link</Link>
+        poke list tab: 
+        <Link to="/pokesingle"> to pokesingle</Link>
     </div>
 
   )

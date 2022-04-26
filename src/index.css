@@ -44,6 +44,12 @@ ul {
 a {
   color: azure;
   text-decoration: none;
+  border-radius: 2px;
+  padding: 2px;
+}
+
+a:hover{
+  background-color: coral;
   
 }
 

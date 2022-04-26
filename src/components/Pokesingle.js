@@ -2,7 +2,7 @@ import React from 'react'
 
 function Pokesingle() {
   return (
-    <div>Pokesingle</div>
+    <div>more info (pokesingle)</div>
   )
 }
 
