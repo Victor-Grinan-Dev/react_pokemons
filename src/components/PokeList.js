@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import PokeCard from './PokeCard'
 
-let amount= 10;
+let amount= 50;
 if (amount > 655){
     amount = 655;
 }
