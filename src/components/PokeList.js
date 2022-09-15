@@ -10,6 +10,7 @@ const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
 //game view: https://codepen.io/willtomtid/pen/gOPpQjZ
 //cards view: https://heatherketten.wordpress.com/2018/03/27/css-fake-pokemon-cards/
 //find pair game: https://codepen.io/mbransons/pen/MWjvGVo
+//catch a pokemon: https://codepen.io/stlfountain/pen/gOLajxp
 class PokeList extends Component {
     state = {
         data:[],
