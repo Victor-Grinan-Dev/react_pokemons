@@ -15,8 +15,8 @@ const RouterWrapper = (props) => {
 
 function App() {
   return (
-    <HashRouter>
-      <BrowserRouter className="App">
+    <HashRouter className="App">
+      
         <Routes>
               <Route path="/" element={<Layout/>}>
                 <Route index element={<Home/>}></Route>
@@ -29,7 +29,7 @@ function App() {
                 <Route path="favList" element={<FavList/>}></Route>
               </Route>       
           </Routes>   
-      </BrowserRouter>
+      
     </HashRouter>
   );
 }
