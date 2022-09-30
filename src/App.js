@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, useParams, HashRouter } from 'react-router-dom';
+import { Routes, Route, useParams, HashRouter } from 'react-router-dom';
 import Layout from './pages/Layout';
 
 import About from './components/About';
@@ -20,11 +20,8 @@ function App() {
               <Route path="/" element={<Layout/>}>
                 <Route index element={<Home/>}></Route>
                 <Route path="about" element={<About/>}></Route> 
-
-                <Route path="pokeList" element={<PokeList/>}></Route>
-                
+                <Route path="pokeList" element={<PokeList/>}></Route>               
                 <Route path="pokesingle/:pokesingle" element={<RouterWrapper/>}/>
-
                 <Route path="favList" element={<FavList/>}></Route>
               </Route>       
           </Routes>   
