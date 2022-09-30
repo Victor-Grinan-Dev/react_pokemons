@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useParams, HashRouter } from 'react-router-dom';
 import Layout from './pages/Layout';
 
 import About from './components/About';
@@ -15,22 +15,22 @@ const RouterWrapper = (props) => {
 
 function App() {
   return (
-    <BrowserRouter className="App">
+    <HashRouter>
+      <BrowserRouter className="App">
+        <Routes>
+              <Route path="/" element={<Layout/>}>
+                <Route index element={<Home/>}></Route>
+                <Route path="about" element={<About/>}></Route> 
 
-      <Routes>
-            <Route path="/" element={<Layout/>}>
-              <Route index element={<Home/>}></Route>
-              <Route path="about" element={<About/>}></Route> 
+                <Route path="pokeList" element={<PokeList/>}></Route>
+                
+                <Route path="pokesingle/:pokesingle" element={<RouterWrapper/>}/>
 
-              <Route path="pokeList" element={<PokeList/>}></Route>
-              
-              <Route path="pokesingle/:pokesingle" element={<RouterWrapper/>}/>
-
-              <Route path="favList" element={<FavList/>}></Route>
-            </Route>       
-        </Routes>   
-
-    </BrowserRouter>
+                <Route path="favList" element={<FavList/>}></Route>
+              </Route>       
+          </Routes>   
+      </BrowserRouter>
+    </HashRouter>
   );
 }
 
