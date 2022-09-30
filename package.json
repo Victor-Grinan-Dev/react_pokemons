@@ -2,7 +2,7 @@
   "name": "react_pokemons",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://victor-grinan-dev.github.io",
+  "homepage": "https://victor-grinan-dev.github.io/react_pokemons",
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.4",
