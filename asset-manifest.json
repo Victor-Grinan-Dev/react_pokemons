@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.b221a378.css",
-    "main.js": "/static/js/main.21a66005.js",
+    "main.js": "/static/js/main.8b28eb04.js",
     "static/media/poke-title.png": "/static/media/poke-title.c8e5f5413616d2d8709c.png",
     "index.html": "/index.html",
     "main.b221a378.css.map": "/static/css/main.b221a378.css.map",
-    "main.21a66005.js.map": "/static/js/main.21a66005.js.map"
+    "main.8b28eb04.js.map": "/static/js/main.8b28eb04.js.map"
   },
   "entrypoints": [
     "static/css/main.b221a378.css",
-    "static/js/main.21a66005.js"
+    "static/js/main.8b28eb04.js"
   ]
 }
