@@ -9,9 +9,11 @@ function Navegator() {
             <li>
                 <Link to="/">Home</Link>
             </li>
-            <li>
-                <Link to="/favList">FavList</Link>
-            </li>
+            {/*
+                <li>
+                    <Link to="/favList">FavList</Link>
+                </li>
+            */}
             <li>
                 <Link to="/pokeList">PokeList</Link>
             </li>
