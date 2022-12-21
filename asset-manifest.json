@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react_pokemons/static/css/main.1b187fd0.css",
-    "main.js": "/react_pokemons/static/js/main.af326390.js",
+    "main.css": "/react_pokemons/static/css/main.f11b31a0.css",
+    "main.js": "/react_pokemons/static/js/main.a6ca3c3b.js",
     "static/media/type_bug.png": "/react_pokemons/static/media/type_bug.0e88ed0fabd3b1379dba.png",
     "static/media/type_metal.png": "/react_pokemons/static/media/type_metal.ecaca682f06da6874a0d.png",
     "static/media/type_dragon_dino.png": "/react_pokemons/static/media/type_dragon_dino.38d26134dc92b2d6cdcc.png",
@@ -21,12 +21,13 @@
     "static/media/type_electric.png": "/react_pokemons/static/media/type_electric.1598ff0830e6f6a78455.png",
     "static/media/type_dark.png": "/react_pokemons/static/media/type_dark.b424e9e57a082840f8b8.png",
     "static/media/poke-title.png": "/react_pokemons/static/media/poke-title.c8e5f5413616d2d8709c.png",
+    "static/media/pokeball.png": "/react_pokemons/static/media/pokeball.c85373b997500c76b389.png",
     "index.html": "/react_pokemons/index.html",
-    "main.1b187fd0.css.map": "/react_pokemons/static/css/main.1b187fd0.css.map",
-    "main.af326390.js.map": "/react_pokemons/static/js/main.af326390.js.map"
+    "main.f11b31a0.css.map": "/react_pokemons/static/css/main.f11b31a0.css.map",
+    "main.a6ca3c3b.js.map": "/react_pokemons/static/js/main.a6ca3c3b.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b187fd0.css",
-    "static/js/main.af326390.js"
+    "static/css/main.f11b31a0.css",
+    "static/js/main.a6ca3c3b.js"
   ]
 }
