@@ -3,6 +3,9 @@ import { types } from '../assests/images';
 //import { Link } from 'react-router-dom';
 
 function PokeCard(props) {
+  const capitalize = (str) => {
+    return str.charAt(0).toUpperCase()+props.name.slice(1);
+  }
   return (
     <div className="poke-card">
       <div className="poke-card-content">
@@ -10,7 +13,7 @@ function PokeCard(props) {
           <p className='rarety'>
             BASIC
           </p>
-          <h3 className='poke-name'>{props.name.charAt(0).toUpperCase()+props.name.slice(1)}</h3>
+          <h3 className='poke-name'>{capitalize(props.name)}</h3>
           <div>
 
           </div>
@@ -37,10 +40,15 @@ function PokeCard(props) {
         </div>
 
         <div className='powers-area'>
-          <div>
-            <p>powerImage</p>
-            <p>powerName</p>
-            <p>powerDamage</p>
+          <div className='abilities'>
+            {props.abilities.map((a,i) => (
+              <div key={i} className='ability'>
+                <img className='type-image' src={types[props.types[0].type.name]}/>
+                <p >{a.ability.name}</p>
+                <p>10</p>
+              </div>  
+            ))}
+            
           </div>
           <p className='power-description'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non elementum ligula. Curabitur porttitor porta porttitor. Curabitur vehicula diam mi.

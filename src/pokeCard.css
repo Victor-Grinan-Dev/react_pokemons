@@ -121,7 +121,19 @@
     height: 150px;
     margin: 2px;
   }
-
+.abilities{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.ability{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 0 0 5px white;
+}
   .single-poke{
     color: rgb(119, 80, 2);
   }

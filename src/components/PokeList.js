@@ -44,7 +44,8 @@ class PokeList extends Component {
                     key={p.id} 
                     name={p.name} 
                     id={p.id}
-                    img={p.sprites.other.dream_world.front_default} 
+                    img={p.sprites.other.dream_world.front_default}
+                    imgArt={p.sprites.other["official-artwork"].front_default} 
                     abilities={p.abilities}
                     height={p.height}
                     weight={p.weight}
@@ -62,5 +63,6 @@ class PokeList extends Component {
     export default PokeList;
 
     //p.sprites.other.dream_world.front_default
+    //p.sprites.other.official-artwork.front_default
     //p.sprites.version["generation-v"]["black-white"].animated.front_default//gif
     //p.sprites.versions["generation-v"]["black-white"].animated.back_default
