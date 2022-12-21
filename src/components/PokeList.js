@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import PokeCard from './PokeCard'
 
-let amount= 50;
+let amount= 10;
 if (amount > 655){
     amount = 655;
 }
@@ -39,7 +39,20 @@ class PokeList extends Component {
         return (
             <div className='all-pokes'>
                 {this.state.data.map((p)=> (
-                    <PokeCard name={p.name} key={p.name} img={p.sprites.other.dream_world.front_default}/> 
+                    console.log(p.stats[1].base_stat),
+                    console.log(p),
+                    <PokeCard 
+                    key={p.name} 
+                    name={p.name} 
+                    img={p.sprites.other.dream_world.front_default} 
+                    abilities={p.abilities}
+                    height={p.height}
+                    weight={p.weight}
+                    hp={p.stats[0].base_stat}
+                    attack={p.stats[1].base_stat}
+                    defense={p.stats[2].base_stat}
+                    types={p.types}
+                    /> 
                 ))}          
             </div>
         )

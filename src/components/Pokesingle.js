@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 
 export default class Pokesingle extends Component {
@@ -8,6 +7,7 @@ export default class Pokesingle extends Component {
         isLoading: false,
     };
 
+/*
     componentDidMount(){
         this.setState({
             isLoading: true,
@@ -18,6 +18,7 @@ export default class Pokesingle extends Component {
             this.setState({data: data, isLoading: false});       
         });
     }
+*/
 
   render() {
     return (
