@@ -1,14 +1,32 @@
 {
   "files": {
-    "main.css": "/react_pokemons/static/css/main.a7d5e1f0.css",
-    "main.js": "/react_pokemons/static/js/main.8b28eb04.js",
+    "main.css": "/react_pokemons/static/css/main.1b187fd0.css",
+    "main.js": "/react_pokemons/static/js/main.af326390.js",
+    "static/media/type_bug.png": "/react_pokemons/static/media/type_bug.0e88ed0fabd3b1379dba.png",
+    "static/media/type_metal.png": "/react_pokemons/static/media/type_metal.ecaca682f06da6874a0d.png",
+    "static/media/type_dragon_dino.png": "/react_pokemons/static/media/type_dragon_dino.38d26134dc92b2d6cdcc.png",
+    "static/media/type_poison.png": "/react_pokemons/static/media/type_poison.71dc8767738dc53bfa0a.png",
+    "static/media/type_fairy.png": "/react_pokemons/static/media/type_fairy.5485e53f124e9c3a1cd1.png",
+    "static/media/type_figthing.png": "/react_pokemons/static/media/type_figthing.2c93a3637b821a7197e0.png",
+    "static/media/type_psychic.png": "/react_pokemons/static/media/type_psychic.d545d5bfc9ae055afe22.png",
+    "static/media/type_ice.png": "/react_pokemons/static/media/type_ice.400c2fe5404ab086876a.png",
+    "static/media/type_flying.png": "/react_pokemons/static/media/type_flying.b0862f56f69cc5cff889.png",
+    "static/media/type_rock.png": "/react_pokemons/static/media/type_rock.8fba39968442af38e0c4.png",
+    "static/media/type_sand.png": "/react_pokemons/static/media/type_sand.76b656c81b10a687d044.png",
+    "static/media/type_grass.png": "/react_pokemons/static/media/type_grass.e0b7afe49deb4cfd6cef.png",
+    "static/media/type_normal.png": "/react_pokemons/static/media/type_normal.9e7302bc6edef904829f.png",
+    "static/media/type_fire.png": "/react_pokemons/static/media/type_fire.66f30030decb21a90763.png",
+    "static/media/type_water.png": "/react_pokemons/static/media/type_water.5dcc768ea80f9e317bf5.png",
+    "static/media/type_ghost.png": "/react_pokemons/static/media/type_ghost.bd679423abb17622430c.png",
+    "static/media/type_electric.png": "/react_pokemons/static/media/type_electric.1598ff0830e6f6a78455.png",
+    "static/media/type_dark.png": "/react_pokemons/static/media/type_dark.b424e9e57a082840f8b8.png",
     "static/media/poke-title.png": "/react_pokemons/static/media/poke-title.c8e5f5413616d2d8709c.png",
     "index.html": "/react_pokemons/index.html",
-    "main.a7d5e1f0.css.map": "/react_pokemons/static/css/main.a7d5e1f0.css.map",
-    "main.8b28eb04.js.map": "/react_pokemons/static/js/main.8b28eb04.js.map"
+    "main.1b187fd0.css.map": "/react_pokemons/static/css/main.1b187fd0.css.map",
+    "main.af326390.js.map": "/react_pokemons/static/js/main.af326390.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7d5e1f0.css",
-    "static/js/main.8b28eb04.js"
+    "static/css/main.1b187fd0.css",
+    "static/js/main.af326390.js"
   ]
 }
