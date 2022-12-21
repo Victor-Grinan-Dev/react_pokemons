@@ -26,7 +26,7 @@ function PokeCard(props) {
           <div className='types'>
             {props.types.map((t,i) => (
               //console.log(t.type.name),
-              <img className='type-image' key={i} src={types[t.type.name]}/>
+              <img className='type-image' key={i} src={types[t.type.name]} alt="energy"/>
             ))}
           </div>
           
@@ -43,7 +43,7 @@ function PokeCard(props) {
           <div className='abilities'>
             {props.abilities.map((a,i) => (
               <div key={i} className='ability'>
-                <img className='type-image' src={types[props.types[0].type.name]}/>
+                <img className='type-image' src={types[props.types[0].type.name]} alt="energy"/>
                 <p >{a.ability.name}</p>
                 <p>10</p>
               </div>  
