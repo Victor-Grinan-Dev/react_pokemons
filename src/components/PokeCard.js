@@ -1,4 +1,5 @@
 import React from 'react';
+import { types } from '../assests/images';
 //import { Link } from 'react-router-dom';
 
 function PokeCard(props) {
@@ -6,25 +7,33 @@ function PokeCard(props) {
     <div className="poke-card">
       <div className="poke-card-content">
         <div className='top-info'>
-          <div className='rarety'>
-            <p>basic</p>
-          </div>
+          <p className='rarety'>
+            BASIC
+          </p>
           <h3 className='poke-name'>{props.name.charAt(0).toUpperCase()+props.name.slice(1)}</h3>
           <div>
 
           </div>
-          <div>
-            <p className='hpKey'>hp</p>
-            <p className='hpValue'>70</p>
-            <div className='types'>{props.types[0].type.name}</div>
+          
+          <div className='hp-area'>
+            <p className='hpKey'>HP</p>
+            <p className='hpValue'>{props.hp}</p>
           </div>
+
+          <div className='types'>
+            {props.types.map((t,i) => (
+              //console.log(t.type.name),
+              <img className='type-image' key={i} src={types[t.type.name]}/>
+            ))}
+          </div>
+          
         </div>
 
         <div className='image-frame'>
           <img className='poke-image' src={props.img} alt={props.name}></img>
         </div>
         <div className='image-frame-bottom'>
-          <p>No 01 pokemon type HT/ 08"  WT 4.9lbs</p>
+          <p>No {props.id} pokemon HT {props.height}"  WT {props.weight}lbs</p>
         </div>
 
         <div className='powers-area'>
