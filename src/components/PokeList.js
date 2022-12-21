@@ -2,10 +2,8 @@
 import React, { Component } from 'react'
 import PokeCard from './PokeCard'
 
-let amount= 100;
-if (amount > 655){
-    amount = 655;
-}
+let amount= 1000;
+
 const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
 //game view: https://codepen.io/willtomtid/pen/gOPpQjZ
 //cards view: https://heatherketten.wordpress.com/2018/03/27/css-fake-pokemon-cards/
@@ -39,11 +37,12 @@ class PokeList extends Component {
         return (
             <div className='all-pokes'>
                 {this.state.data.map((p)=> (
+                    console.log(p),
                     <PokeCard 
                     key={p.id} 
                     name={p.name} 
                     id={p.id}
-                    img={p.sprites.other.dream_world.front_default}
+                    img={p.sprites.other.dream_world.front_default || p.sprites.front_default }
                     imgArt={p.sprites.other["official-artwork"].front_default} 
                     abilities={p.abilities}
                     height={p.height}
