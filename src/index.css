@@ -34,6 +34,14 @@ header{
   position: relative;
 }
 
+.about{
+  width:100%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  position: relative;
+}
+
 .title{
   background-image: url("./assests/poke-title.png");
   background-size: 50%;
@@ -47,10 +55,11 @@ header{
 }
 .ball{
   background-image: url("./assests/pokeball.png");
-  background-size: 25%;
+  background-size: 50%;
   width:100%;
   height:100%;
   background-repeat: no-repeat;
+  background-position: center;
   position: absolute;               
   top: 50%;                         
   transform: translate(0, -50%)
