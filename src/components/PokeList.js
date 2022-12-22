@@ -37,7 +37,7 @@ class PokeList extends Component {
         return (
             <div className='all-pokes'>
                 {this.state.data.map((p)=> (
-                    console.log(p),
+                    //console.log(p),
                     <PokeCard 
                     key={p.id} 
                     name={p.name} 

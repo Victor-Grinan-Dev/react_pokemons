@@ -1,14 +1,22 @@
 import React from 'react';
 import { types } from '../assests/images';
+import { cardBackGrounds } from '../assests/cardBackground';
 //import { Link } from 'react-router-dom';
 
 function PokeCard(props) {
+
   const capitalize = (str) => {
     return str.charAt(0).toUpperCase()+props.name.slice(1);
   }
+
+  console.log(props.types[0].type.name)
   return (
     <div className="poke-card">
-      <div className="poke-card-content">
+      <div className="poke-card-content"
+      style={
+        cardBackGrounds[props.types[0].type.name] || null
+      }
+      >
         <div className='top-info'>
           <p className='rarety'>
             BASIC
