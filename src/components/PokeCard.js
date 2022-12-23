@@ -9,7 +9,7 @@ function PokeCard(props) {
     return str.charAt(0).toUpperCase()+props.name.slice(1);
   }
 
-  console.log(props.types[0].type.name)
+  //console.log(props.types[0].type.name)
   return (
     <div className="poke-card">
       <div className="poke-card-content"
