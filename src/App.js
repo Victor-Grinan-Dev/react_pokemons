@@ -12,6 +12,11 @@ const RouterWrapper = (props) => {
   const params = useParams();
   return <Pokesingle params={params}{...props}/>
 }
+//ideas:
+//game view: https://codepen.io/willtomtid/pen/gOPpQjZ
+//cards view: https://heatherketten.wordpress.com/2018/03/27/css-fake-pokemon-cards/
+//find pair game: https://codepen.io/mbransons/pen/MWjvGVo
+//catch a pokemon: https://codepen.io/stlfountain/pen/gOLajxp
 
 function App() {
   return (
