@@ -3,7 +3,6 @@ import { useLocation } from 'react-router';
 
 const Pokesingle = () => {
     const location = useLocation();
-    console.log(location.state)
     const name = location.state.name;
     const id = location.state.id;
     const img = location.state.img;
@@ -23,8 +22,7 @@ const Pokesingle = () => {
     /*
      location.state.abilities
     */
-
-console.log(name)
+   const moves = [];
 
 /*
 //inside pokemon:

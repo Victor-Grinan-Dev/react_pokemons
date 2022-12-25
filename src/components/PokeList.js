@@ -16,7 +16,7 @@ const PokeList = ({data}) => {
   return (
     <div className='all-pokes'>
         {data && data.map((p)=> (
-            //console.log(p),
+            console.log(p),
             <Link to={`${p.name}`} 
                 key={p.id} 
                 state = {
@@ -31,7 +31,9 @@ const PokeList = ({data}) => {
                     hp:p.stats[0].base_stat,
                     attack:p.stats[1].base_stat,
                     defense:p.stats[2].base_stat,
-                    types:p.types}
+                    types:p.types,
+                    moves:p.moves
+                }
                 }
             >
                 <PokeCard 
