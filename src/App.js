@@ -25,14 +25,10 @@ const RouterWrapper = (props) => {
 //catch a pokemon: https://codepen.io/stlfountain/pen/gOLajxp
 
 function App() {
+  const [data, setData] = useState();
 
-  const [data, setData] = useState()
   let amount= 100;
   const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
-
-  class Pokemon{
-    base_experience = undefined;
-  }
 
   useEffect(() => {
     getData()
@@ -42,8 +38,9 @@ function App() {
     await fetch(url)
     .then((res) => res.json())
     .then((data) => {
-        const fetches = data.results.map( (p) => {
-        return fetch(p.url).then((res) => res.json())
+        const fetches = data.results.map( async (p) => {
+        const res = await fetch(p.url);
+          return await res.json();
     });
     Promise.all(fetches).then((res)=>{
         setData(res);
@@ -57,7 +54,7 @@ function App() {
               <Route path="/" element={<Layout/>}>
                 <Route index element={<Home/>}></Route>
                 <Route path="about" element={<About/>}></Route> 
-                <Route path="pokeList" element={<PokeList data={data}/>}></Route>               
+                <Route path="pokeList" element={<PokeList data={data} />}></Route>               
                 <Route path="pokeList/:pokesingle" element={<RouterWrapper/>}/>
                 <Route path="favList" element={<FavList/>}></Route>
               </Route>       

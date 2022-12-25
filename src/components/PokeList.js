@@ -8,8 +8,11 @@ const amount= 100;
 const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
 
 const PokeList = ({data}) => {
-    const [isLoading, setIsLoading] = useState(false);
-    console.log(data);
+    
+    if (!data){
+        return <p>Loading...</p>;
+    }
+
   return (
     <div className='all-pokes'>
         {data && data.map((p)=> (
@@ -71,13 +74,7 @@ class PokeList extends Component {
         });
     }
 
-    render(){
-        if (this.state.isLoading){
-            return <p>Loading...</p>;
-        }
-        return 
-      }
-    };
+
     
     export default PokeList;
 
