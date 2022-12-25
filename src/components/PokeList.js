@@ -1,11 +1,55 @@
-
-import React, { Component } from 'react'
-import PokeCard from './PokeCard'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-let amount= 100;
+//components 
+import PokeCard from './PokeCard'
 
+const amount= 100;
 const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
+
+const PokeList = ({data}) => {
+    const [isLoading, setIsLoading] = useState(false);
+    console.log(data);
+  return (
+    <div className='all-pokes'>
+        {data && data.map((p)=> (
+            console.log(p),
+            <Link to={`${p.name}`} 
+                key={p.id} 
+                data={p}
+                name={p.name} 
+                id={p.id}
+                img={p.sprites.other.dream_world.front_default || p.sprites.front_default }
+                imgArt={p.sprites.other["official-artwork"].front_default} 
+                abilities={p.abilities}
+                height={p.height}
+                weight={p.weight}
+                hp={p.stats[0].base_stat}
+                attack={p.stats[1].base_stat}
+                defense={p.stats[2].base_stat}
+                types={p.types}
+            >
+                <PokeCard 
+                    name={p.name} 
+                    id={p.id}
+                    img={p.sprites.other.dream_world.front_default ||   p.sprites.front_default }
+                    imgArt={p.sprites.other["official-artwork"].   front_default} 
+                    abilities={p.abilities}
+                    height={p.height}
+                    weight={p.weight}
+                    hp={p.stats[0].base_stat}
+                    attack={p.stats[1].base_stat}
+                    defense={p.stats[2].base_stat}
+                    types={p.types}
+                /> 
+            </Link>
+        ))}          
+    </div>
+)
+}
+
+export default PokeList
+/*
 
 class PokeList extends Component {
     state = {
@@ -31,42 +75,7 @@ class PokeList extends Component {
         if (this.state.isLoading){
             return <p>Loading...</p>;
         }
-        return (
-            <div className='all-pokes'>
-                {this.state.data.map((p)=> (
-                    console.log(p),
-                    <Link to={`${p.name}`} 
-                        key={p.id} 
-                        data={p}
-                        name={p.name} 
-                        id={p.id}
-                        img={p.sprites.other.dream_world.front_default || p.sprites.front_default }
-                        imgArt={p.sprites.other["official-artwork"].front_default} 
-                        abilities={p.abilities}
-                        height={p.height}
-                        weight={p.weight}
-                        hp={p.stats[0].base_stat}
-                        attack={p.stats[1].base_stat}
-                        defense={p.stats[2].base_stat}
-                        types={p.types}
-                    >
-                        <PokeCard 
-                            name={p.name} 
-                            id={p.id}
-                            img={p.sprites.other.dream_world.front_default ||   p.sprites.front_default }
-                            imgArt={p.sprites.other["official-artwork"].   front_default} 
-                            abilities={p.abilities}
-                            height={p.height}
-                            weight={p.weight}
-                            hp={p.stats[0].base_stat}
-                            attack={p.stats[1].base_stat}
-                            defense={p.stats[2].base_stat}
-                            types={p.types}
-                        /> 
-                    </Link>
-                ))}          
-            </div>
-        )
+        return 
       }
     };
     
@@ -76,3 +85,5 @@ class PokeList extends Component {
     //p.sprites.other.official-artwork.front_default
     //p.sprites.version["generation-v"]["black-white"].animated.front_default//gif
     //p.sprites.versions["generation-v"]["black-white"].animated.back_default
+
+*/
