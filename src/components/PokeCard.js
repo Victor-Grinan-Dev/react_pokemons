@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { types } from '../assests/images';
 import { cardBackGrounds } from '../assests/cardBackground';
 //import { Link } from 'react-router-dom';

@@ -69,15 +69,17 @@ ul {
   flex-direction: row;
   justify-content: space-around;
 }
-
-a {
-  color: azure;
+a{
   text-decoration: none;
+}
+
+ul a {
+  color: azure;
   border-radius: 2px;
   padding: 2px;
 }
 
-a:hover{
+ul a:hover{
   background-color: coral;
   
 }
