@@ -14,10 +14,12 @@ import Pokesingle from './components/Pokesingle';
 //styles
 import './App.css';
 
+/*
 const RouterWrapper = (props) => {
   const params = useParams();
   return <Pokesingle params={params}{...props}/>
 }
+*/
 //ideas:
 //game view: https://codepen.io/willtomtid/pen/gOPpQjZ
 //cards view: https://heatherketten.wordpress.com/2018/03/27/css-fake-pokemon-cards/
@@ -55,7 +57,7 @@ function App() {
                 <Route index element={<Home/>}></Route>
                 <Route path="about" element={<About/>}></Route> 
                 <Route path="pokeList" element={<PokeList data={data} />}></Route>               
-                <Route path="pokeList/:pokesingle" element={<RouterWrapper/>}/>
+                <Route path="pokeList/:pokesingle" element={<Pokesingle/>}/>
                 <Route path="favList" element={<FavList/>}></Route>
               </Route>       
           </Routes>   

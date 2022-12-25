@@ -16,21 +16,23 @@ const PokeList = ({data}) => {
   return (
     <div className='all-pokes'>
         {data && data.map((p)=> (
-            console.log(p),
+            //console.log(p),
             <Link to={`${p.name}`} 
                 key={p.id} 
-                data={p}
-                name={p.name} 
-                id={p.id}
-                img={p.sprites.other.dream_world.front_default || p.sprites.front_default }
-                imgArt={p.sprites.other["official-artwork"].front_default} 
-                abilities={p.abilities}
-                height={p.height}
-                weight={p.weight}
-                hp={p.stats[0].base_stat}
-                attack={p.stats[1].base_stat}
-                defense={p.stats[2].base_stat}
-                types={p.types}
+                state = {
+                    {data:p,
+                    name:p.name,
+                    id:p.id,
+                    img:p.sprites.other.dream_world.front_default || p.sprites.front_default, 
+                    img_art:p.sprites.other["official-artwork"].front_default || null ,
+                    abilities:p.abilities,
+                    height:p.height,
+                    weight:p.weight,
+                    hp:p.stats[0].base_stat,
+                    attack:p.stats[1].base_stat,
+                    defense:p.stats[2].base_stat,
+                    types:p.types}
+                }
             >
                 <PokeCard 
                     name={p.name} 
