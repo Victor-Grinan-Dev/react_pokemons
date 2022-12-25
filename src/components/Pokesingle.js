@@ -52,6 +52,7 @@ const evolvesToUrl = evolData.chain.evolves_to[0].species.url;
         <p>{attack}</p>
         <p>{defense}</p>
         <p>{types}</p>
+        <p>{moves}</p>
 {/*
 data,
         name,

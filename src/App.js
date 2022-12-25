@@ -1,5 +1,5 @@
 //react
-import { Routes, Route, useParams, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import Layout from './pages/Layout';
@@ -33,7 +33,8 @@ function App() {
   const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
 
   useEffect(() => {
-    getData()
+    getData();
+    // eslint-disable-next-line
   }, []);
 
   const getData = async () => {

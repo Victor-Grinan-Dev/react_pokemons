@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 //components 
 import PokeCard from './PokeCard'
 
-const amount= 100;
-const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
+//const amount= 100;
+//const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
 
 const PokeList = ({data}) => {
     
@@ -16,7 +16,7 @@ const PokeList = ({data}) => {
   return (
     <div className='all-pokes'>
         {data && data.map((p)=> (
-            console.log(p),
+            //console.log(p),
             <Link to={`${p.name}`} 
                 key={p.id} 
                 state = {
@@ -40,7 +40,7 @@ const PokeList = ({data}) => {
                     name={p.name} 
                     id={p.id}
                     img={p.sprites.other.dream_world.front_default ||   p.sprites.front_default }
-                    imgArt={p.sprites.other["official-artwork"].   front_default} 
+                    imgArt={p.sprites.other["official-artwork"].front_default} 
                     abilities={p.abilities}
                     height={p.height}
                     weight={p.weight}
