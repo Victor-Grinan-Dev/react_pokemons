@@ -8,17 +8,21 @@ const Pokesingle = () => {
     const id = location.state.id;
     const img = location.state.img;
     const img_art = location.state.img_art;
-    const abilities = location.state.abilities;
     const height = location.state.height;
     const weight = location.state.weight;
     const hp = location.state.hp;
     const attack = location.state.attack;
     const defense = location.state.defense;
     const types = [];
-    location.state.types.map(item => {
-         types.push(item.type.name);
-    });
-    
+/*
+    location.state.type && location.state.type.map(item => {
+        types.push(item.type.name);
+   });
+*/
+    const abilities = [];
+    /*
+     location.state.abilities
+    */
 
 console.log(name)
 
@@ -40,7 +44,16 @@ const evolvesToUrl = evolData.chain.evolves_to[0].species.url;
 
   return (
     <div>
+        <img src={img_art || img} alt={name}/>
         <p>{name}</p>
+        <p>{id}</p>
+        <p>{abilities}</p>
+        <p>{height}</p>
+        <p>{weight}</p>
+        <p>{hp}</p>
+        <p>{attack}</p>
+        <p>{defense}</p>
+        <p>{types}</p>
 {/*
 data,
         name,
