@@ -124,10 +124,17 @@
     height: 150px;
     margin: 2px;
   }
+
+.powers-area{
+  max-width: 90%;
+}
+
 .abilities{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
+    
 }
 .ability{
     display: flex;

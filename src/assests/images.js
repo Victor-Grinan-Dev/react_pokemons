@@ -16,6 +16,8 @@ import psychic from './type_psychic.png';
 import rock from './type_rock.png';
 import sand from './type_sand.png';
 import water from './type_water.png';
+import steel from './type_steel.png';
+import ground from './type_ground.png';
 
 export const types = {
     bug: bug,
@@ -36,4 +38,6 @@ export const types = {
     rock: rock,
     sand: sand,
     water: water,
+    steel:steel,
+    ground:ground,
 }

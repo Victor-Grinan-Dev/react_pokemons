@@ -23,7 +23,10 @@ const grass = {
   const fairy = {
     backgroundImage:"linear-gradient(to right bottom, #c2417c,#f18ab8, #dfb8ef, #c2417c,#f18ab8, #dfb8ef,  #c2417c,#f18ab8, #dfb8ef)"
   }
-  
+  const flying = {
+    backgroundImage:"linear-gradient(to right bottom, #cde5f5, #b0cece , #cde5f5, #b0cece, #cde5f5,#b0cece, #cde5f5,#b0cece, #cde5f5, #b0cece)"
+  }
+
 export const cardBackGrounds = {
     grass:grass,
     fire: fire,
@@ -33,4 +36,7 @@ export const cardBackGrounds = {
     fighting: fighting,
     psychic: psychic,
     fairy: fairy,
+    flying: flying,
+    bug:grass,
+    
 };
