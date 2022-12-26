@@ -97,3 +97,7 @@ main{
 .single-poke{
   color: rgb(119, 80, 2);
 }
+
+.poke-card-content{
+  background-image: linear-gradient(to right bottom, #c2417c,#f18ab8, #dfb8ef, #c2417c,#f18ab8, #dfb8ef,  #c2417c,#f18ab8, #dfb8ef)
+}

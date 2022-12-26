@@ -40,11 +40,13 @@ function PokeCard(props) {
           
         </div>
 
-        <div className='image-frame'>
-          <img className='poke-image' src={props.img} alt={props.name}></img>
-        </div>
-        <div className='image-frame-bottom'>
-          <p>No {props.id} pokemon HT {props.height}"  WT {props.weight}lbs</p>
+        <div className='image-frame-container'>
+          <div className='image-frame'>
+            <img className='poke-image' src={props.img} alt={props.name}></img>
+          </div>
+          <div className='image-frame-bottom'>
+            <p>No {props.id} pokemon HT {props.height}"  WT {props.weight}lbs</p>
+          </div>
         </div>
 
         <div className='powers-area'>
