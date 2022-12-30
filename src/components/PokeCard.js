@@ -1,15 +1,24 @@
 import React from 'react';
 import { types } from '../assests/images';
+import { cardBackGrounds } from '../assests/cardBackground';
 //import { Link } from 'react-router-dom';
 
 function PokeCard(props) {
+
   const capitalize = (str) => {
     return str.charAt(0).toUpperCase()+props.name.slice(1);
   }
-  console.log(props.speciesData)
+
+
+  //console.log(props.types[0].type.name)
+
   return (
     <div className="poke-card">
-      <div className="poke-card-content">
+      <div className="poke-card-content"
+      style={
+        cardBackGrounds[props.types[0].type.name] || null
+      }
+      >
         <div className='top-info'>
           <p className='rarety'>
             BASIC
@@ -27,24 +36,26 @@ function PokeCard(props) {
           <div className='types'>
             {props.types.map((t,i) => (
               //console.log(t.type.name),
-              <img className='type-image' key={i} src={types[t.type.name]} alt="energy"/>
+              <img className='type-image' key={i} src={types[t.type.name] || types["normal"]} alt="energy"/>
             ))}
           </div>
           
         </div>
 
-        <div className='image-frame'>
-          <img className='poke-image' src={props.img} alt={props.name}></img>
-        </div>
-        <div className='image-frame-bottom'>
-          <p>No {props.id} pokemon HT {props.height}"  WT {props.weight}lbs</p>
+        <div className='image-frame-container'>
+          <div className='image-frame'>
+            <img className='poke-image' src={props.img} alt={props.name}></img>
+          </div>
+          <div className='image-frame-bottom'>
+            <p>No {props.id} pokemon HT {props.height}"  WT {props.weight}lbs</p>
+          </div>
         </div>
 
         <div className='powers-area'>
           <div className='abilities'>
             {props.abilities.map((a,i) => (
               <div key={i} className='ability'>
-                <img className='type-image' src={types[props.types[0].type.name]} alt="energy"/>
+                <img className='type-image' src={types[props.types[0].type.name] || types["normal"]} alt="energy"/>
                 <p >{a.ability.name}</p>
                 <p>10</p>
               </div>  
@@ -81,4 +92,4 @@ function PokeCard(props) {
   )
 }
 
-export default PokeCard
+export default PokeCard;

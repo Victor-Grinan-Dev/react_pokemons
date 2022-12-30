@@ -34,7 +34,7 @@
     box-shadow: -3px -3px 3px rgb(1, 78, 1);
     position: relative;
 
-    background-image: linear-gradient(to right bottom, #fce256, green,#fce256,green, #fce256);
+    background-image: linear-gradient(to right bottom, #f4f7f9, #efb820, #efb209, #c56f0c, #efb209,#efb820, #c56f0c,#efb209, #efb820, #f4f7f9);
 
     display: flex;
     flex-direction: column;
@@ -90,18 +90,21 @@
 .types{
     display: flex;
 }
+.image-frame-container{
+  width: 90%;
+}
 
 .image-frame{
     background-color: aliceblue;
-    width: 90%;
-    border-radius: 2px;
+    width: 98%;
+    border-radius: 5px 5px 0 0;
     border: rgb(254, 254, 254) solid;
     box-shadow: inset 2px 2px 2px black,  2px 2px 2px black;
 }
 
 .image-frame-bottom{
-    width: 90%;
-    border-radius: 2px;
+    width: 98%;
+    border-radius:0 0 5px 5px ;
     border: rgb(254, 254, 254) solid;
     box-shadow: inset 2px 2px 2px black,  2px 2px 2px black;
     text-align: center;
@@ -121,10 +124,17 @@
     height: 150px;
     margin: 2px;
   }
+
+.powers-area{
+  max-width: 90%;
+}
+
 .abilities{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
+    
 }
 .ability{
     display: flex;

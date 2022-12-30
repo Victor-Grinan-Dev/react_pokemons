@@ -78,15 +78,17 @@ ul {
   flex-direction: row;
   justify-content: space-around;
 }
-
-a {
-  color: azure;
+a{
   text-decoration: none;
+}
+
+ul a {
+  color: azure;
   border-radius: 2px;
   padding: 2px;
 }
 
-a:hover{
+ul a:hover{
   background-color: coral;
   
 }
@@ -104,6 +106,7 @@ main{
 .single-poke{
   color: rgb(119, 80, 2);
 }
+
 
 /*loading*/
 .lds-grid {
@@ -172,4 +175,8 @@ main{
   50% {
     opacity: 0.5;
   }
+}
+
+.poke-card-content{
+  background-image: linear-gradient(to right bottom, #c2417c,#f18ab8, #dfb8ef, #c2417c,#f18ab8, #dfb8ef,  #c2417c,#f18ab8, #dfb8ef)
 }

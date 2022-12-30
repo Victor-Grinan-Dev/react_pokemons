@@ -1,5 +1,7 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import React, { Component } from 'react'
+//components 
 import PokeCard from './PokeCard'
 
 let amount= 10;
@@ -10,6 +12,59 @@ const speciesUrl = "https://pokeapi.co/api/v2/pokemon-species/";
 //cards view: https://heatherketten.wordpress.com/2018/03/27/css-fake-pokemon-cards/
 //find pair game: https://codepen.io/mbransons/pen/MWjvGVo
 //catch a pokemon: https://codepen.io/stlfountain/pen/gOLajxp
+
+
+const PokeList = ({data}) => {
+    
+    if (!data){
+        return <p>Loading...</p>;
+    }
+
+  return (
+    <div className='all-pokes'>
+        {data && data.map((p)=> (
+            //console.log(p),
+            <Link to={`${p.name}`} 
+                key={p.id} 
+                state = {
+                    {data:p,
+                    name:p.name,
+                    id:p.id,
+                    img:p.sprites.other.dream_world.front_default || p.sprites.front_default, 
+                    img_art:p.sprites.other["official-artwork"].front_default || null ,
+                    abilities:p.abilities,
+                    height:p.height,
+                    weight:p.weight,
+                    hp:p.stats[0].base_stat,
+                    attack:p.stats[1].base_stat,
+                    defense:p.stats[2].base_stat,
+                    types:p.types,
+                    moves:p.moves
+                }
+                }
+            >
+                <PokeCard 
+                    name={p.name} 
+                    id={p.id}
+                    img={p.sprites.other.dream_world.front_default ||   p.sprites.front_default }
+                    imgArt={p.sprites.other["official-artwork"].front_default} 
+                    abilities={p.abilities}
+                    height={p.height}
+                    weight={p.weight}
+                    hp={p.stats[0].base_stat}
+                    attack={p.stats[1].base_stat}
+                    defense={p.stats[2].base_stat}
+                    types={p.types}
+                /> 
+            </Link>
+        ))}          
+    </div>
+)
+}
+
+export default PokeList
+/*
+>>>>>>> ecf22360d134c6e76bec5d57bbb969d3f4b09e36
 class PokeList extends Component {
     state = {
         data:[],
@@ -30,6 +85,7 @@ class PokeList extends Component {
             });
         });
     }
+
     getSpeciesData(id){
         let speciesData;
         fetch(speciesUrl + id +'/')
@@ -82,3 +138,5 @@ class PokeList extends Component {
     //p.sprites.other.official-artwork.front_default
     //p.sprites.version["generation-v"]["black-white"].animated.front_default//gif
     //p.sprites.versions["generation-v"]["black-white"].animated.back_default
+
+*/

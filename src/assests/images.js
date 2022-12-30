@@ -3,7 +3,7 @@ import dark from './type_dark.png';
 import dragon from './type_dragon_dino.png';
 import electric from './type_electric.png';
 import fairy from './type_fairy.png';
-import figthing from './type_figthing.png';
+import fighting from './type_figthing.png';
 import fire from './type_fire.png';
 import flying from './type_flying.png';
 import ghost from './type_ghost.png';
@@ -16,6 +16,8 @@ import psychic from './type_psychic.png';
 import rock from './type_rock.png';
 import sand from './type_sand.png';
 import water from './type_water.png';
+import steel from './type_steel.png';
+import ground from './type_ground.png';
 
 export const types = {
     bug: bug,
@@ -23,7 +25,7 @@ export const types = {
     dragon: dragon,
     electric: electric,
     fairy: fairy,
-    figthing: figthing,
+    fighting: fighting,
     fire: fire,
     flying: flying,
     ghost: ghost,
@@ -36,4 +38,6 @@ export const types = {
     rock: rock,
     sand: sand,
     water: water,
+    steel:steel,
+    ground:ground,
 }
