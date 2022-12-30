@@ -6,6 +6,7 @@ function PokeCard(props) {
   const capitalize = (str) => {
     return str.charAt(0).toUpperCase()+props.name.slice(1);
   }
+  console.log(props.speciesData)
   return (
     <div className="poke-card">
       <div className="poke-card-content">

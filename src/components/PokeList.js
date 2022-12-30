@@ -2,9 +2,10 @@
 import React, { Component } from 'react'
 import PokeCard from './PokeCard'
 
-let amount= 1000;
+let amount= 10;
 
 const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
+const speciesUrl = "https://pokeapi.co/api/v2/pokemon-species/";
 //game view: https://codepen.io/willtomtid/pen/gOPpQjZ
 //cards view: https://heatherketten.wordpress.com/2018/03/27/css-fake-pokemon-cards/
 //find pair game: https://codepen.io/mbransons/pen/MWjvGVo
@@ -12,6 +13,7 @@ const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
 class PokeList extends Component {
     state = {
         data:[],
+        speciesData:{},
         isLoading: false,
     }
 
@@ -28,18 +30,33 @@ class PokeList extends Component {
             });
         });
     }
-
+    getSpeciesData(id){
+        let speciesData;
+        fetch(speciesUrl + id +'/')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            //this.setState({...this.state , [speciesData]: data});
+        })
+        return speciesData;
+    }
     render(){
         if (this.state.isLoading){
-            return <p>Loading...</p>;
+            return (
+                <div class="lds-grid">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+            
+            );
         }
     
         return (
             <div className='all-pokes'>
                 {this.state.data.map((p)=> (
-                    console.log(p),
+                    <div key={p.id}>
+                        {this.getSpeciesData(p.id)}
                     <PokeCard 
-                    key={p.id} 
+                     
                     name={p.name} 
                     id={p.id}
                     img={p.sprites.other.dream_world.front_default || p.sprites.front_default }
@@ -52,6 +69,7 @@ class PokeList extends Component {
                     defense={p.stats[2].base_stat}
                     types={p.types}
                     /> 
+                    </div>
                 ))}          
             </div>
         )
