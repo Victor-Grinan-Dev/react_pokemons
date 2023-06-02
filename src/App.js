@@ -29,7 +29,7 @@ const RouterWrapper = (props) => {
 function App() {
   const [data, setData] = useState();
 
-  let amount= 100;
+  let amount= 110;
   const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
 
   useEffect(() => {
