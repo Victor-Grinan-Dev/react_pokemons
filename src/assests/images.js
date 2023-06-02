@@ -1,3 +1,6 @@
+/**
+ * This holds the icons types
+ */
 import bug  from './type_bug.png';
 import dark from './type_dark.png';
 import dragon from './type_dragon_dino.png';

@@ -1,3 +1,7 @@
+/**
+ * this are the gradients backgrounds of the cards
+ */
+
 const grass = {
     backgroundImage: "linear-gradient(to right bottom, #fce256, green,#fce256,green, #fce256)"
   }
