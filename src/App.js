@@ -12,7 +12,7 @@ import FavList from './components/FavList';
 import Pokesingle from './components/Pokesingle';
 
 //styles
-import './App.css';
+import './styles/App.css';
 
 /*
 const RouterWrapper = (props) => {

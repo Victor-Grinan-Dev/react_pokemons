@@ -1,30 +1,39 @@
-import React from 'react'
-import { useLocation } from 'react-router';
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router";
+import { backgroundGen } from "../assests/bgGenerator";
+import defaultTerrain from '../assests/bg_blue_storm.png';
 
 const Pokesingle = () => {
-    const location = useLocation();
-    const name = location.state.name;
-    const id = location.state.id;
-    const img = location.state.img;
-    const img_art = location.state.img_art;
-    const height = location.state.height;
-    const weight = location.state.weight;
-    const hp = location.state.hp;
-    const attack = location.state.attack;
-    const defense = location.state.defense;
-    const types = [];
-/*
+  const location = useLocation();
+  const name = location.state.name;
+  // const id = location.state.id;
+  const img = location.state.img;
+  const img_art = location.state.img_art;
+  const [terrain, setTerrain] = useState('');
+  
+  // const height = location.state.height;
+  // const weight = location.state.weight;
+  // const hp = location.state.hp;
+  // const attack = location.state.attack;
+  // const defense = location.state.defense;
+  // const types = [];
+  /*
     location.state.type && location.state.type.map(item => {
         types.push(item.type.name);
    });
 */
-    const abilities = [];
-    /*
+  // const abilities = [];
+  /*
      location.state.abilities
     */
-   const moves = [];
+  // const moves = [];
 
-/*
+  /*
+
+style={{
+      backgroundImage:`url(${})`,
+    }}
+
 //inside pokemon:
 const pokeSpecieUrl = `https://pokeapi.co/api/v2/pokemon-species/${pokeId}`;
 const captureRate = pokeSpecieUrl.capture_rate;
@@ -39,22 +48,22 @@ const minLVLtoEvol = evolData.chain.evolves_to[0].evolution_details.min_level;
 const evolvesTo = evolData.chain.evolves_to[0].species.name;
 const evolvesToUrl = evolData.chain.evolves_to[0].species.url;
 */
+  useEffect(() => {
+    console.log(backgroundGen());
+    setTerrain(backgroundGen());
+  }, []);
 
+  const terrainStyle = {
+    backgroundImage:`url(${terrain || defaultTerrain})`,
+  }
   return (
-    <div>
-        <img src={img_art || img} alt={name}/>
-        <p>{name}</p>
-        <p>{id}</p>
-        <p>{abilities}</p>
-        <p>{height}</p>
-        <p>{weight}</p>
-        <p>{hp}</p>
-        <p>{attack}</p>
-        <p>{defense}</p>
-        <p>{types}</p>
-        <p>{moves}</p>
-{/*
-data,
+    <div className="poke-container" 
+      style={terrainStyle}
+    >
+      <img className="pokeArt" src={img_art || img} alt={name} />
+
+      {/*
+        data,
         name,
         id,
         img,
@@ -82,9 +91,20 @@ data,
         <p>{hp}</p>
         <p>{attack}</p>
         <p>{defense}</p>
+      <div>
+        <p>{id}</p>
+        <p>{img}</p>
+        <p>{img_art}</p>
+        <p>{abilities}</p>
+        <p>{height}</p>
+        <p>{weight}</p>
+        <p>{hp}</p>
+        <p>{attack}</p>
+        <p>{defense}</p>
+    </div>
 */}
     </div>
-  )
-}
+  );
+};
 
-export default Pokesingle
+export default Pokesingle;
