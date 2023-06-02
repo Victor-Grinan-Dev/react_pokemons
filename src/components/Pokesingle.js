@@ -42,17 +42,22 @@ const evolvesToUrl = evolData.chain.evolves_to[0].species.url;
 
   return (
     <div>
+      <div className='poke-container'>
         <img src={img_art || img} alt={name}/>
-        <p>{name}</p>
-        <p>{id}</p>
-        <p>{abilities}</p>
-        <p>{height}</p>
-        <p>{weight}</p>
-        <p>{hp}</p>
-        <p>{attack}</p>
-        <p>{defense}</p>
-        <p>{types}</p>
-        <p>{moves}</p>
+      </div>
+      <div className='poke-info'>
+          <p>{name}</p>
+          <p>{id}</p>
+          <p>{abilities}</p>
+          <p>{height}</p>
+          <p>{weight}</p>
+          <p>{hp}</p>
+          <p>{attack}</p>
+          <p>{defense}</p>
+          <p>{types}</p>
+          <p>{moves}</p>
+      </div>
+
 {/*
 data,
         name,
