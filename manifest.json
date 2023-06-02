@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Poke App",
+  "name": "An fetch API app",
   "icons": [
     {
       "src": "pokeball.png",
