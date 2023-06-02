@@ -101,6 +101,7 @@ main{
   flex-wrap: wrap;
   justify-content: center;
   color: azure;
+  position: relative;
 }
 
 .single-poke{

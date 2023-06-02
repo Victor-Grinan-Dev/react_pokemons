@@ -9,7 +9,6 @@ function PokeCard(props) {
     return str.charAt(0).toUpperCase()+props.name.slice(1);
   }
 
-
   //console.log(props.types[0].type.name)
 
   return (
@@ -35,7 +34,6 @@ function PokeCard(props) {
 
           <div className='types'>
             {props.types.map((t,i) => (
-              //console.log(t.type.name),
               <img className='type-image' key={i} src={types[t.type.name] || types["normal"]} alt="energy"/>
             ))}
           </div>
