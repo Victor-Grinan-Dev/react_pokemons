@@ -28,8 +28,6 @@ const types = [
   "fire",
   "water",
   "bug",
-  "dark",
-  "dragon",
   "electric",
   "fairy",
   "fighting",
@@ -38,12 +36,10 @@ const types = [
   "grass",
   "ground",
   "ice",
-  "metal",
   "normal",
   "poison",
   "psychic",
   "rock",
-  "sand",
 ];
 const typesObj = {
   fire: fire,
