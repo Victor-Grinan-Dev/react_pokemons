@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react_pokemons/static/css/main.a3b80638.css",
-    "main.js": "/react_pokemons/static/js/main.e9a58016.js",
+    "main.css": "/react_pokemons/static/css/main.6a346c99.css",
+    "main.js": "/react_pokemons/static/js/main.a6db7aa1.js",
     "static/media/bg_forest.png": "/react_pokemons/static/media/bg_forest.36e80cf197d23213a8ff.png",
     "static/media/bg_dark_forest.png": "/react_pokemons/static/media/bg_dark_forest.4c83e9117d90a0bd5dec.png",
     "static/media/bg_city.png": "/react_pokemons/static/media/bg_city.29cb30f9760414a5c187.png",
@@ -37,11 +37,11 @@
     "static/media/pokeball.png": "/react_pokemons/static/media/pokeball.c85373b997500c76b389.png",
     "static/media/type_ground.png": "/react_pokemons/static/media/type_ground.a46508b845ffb9f10267.png",
     "index.html": "/react_pokemons/index.html",
-    "main.a3b80638.css.map": "/react_pokemons/static/css/main.a3b80638.css.map",
-    "main.e9a58016.js.map": "/react_pokemons/static/js/main.e9a58016.js.map"
+    "main.6a346c99.css.map": "/react_pokemons/static/css/main.6a346c99.css.map",
+    "main.a6db7aa1.js.map": "/react_pokemons/static/js/main.a6db7aa1.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3b80638.css",
-    "static/js/main.e9a58016.js"
+    "static/css/main.6a346c99.css",
+    "static/js/main.a6db7aa1.js"
   ]
 }
