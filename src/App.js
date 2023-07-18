@@ -1,18 +1,18 @@
 //react
-import { Routes, Route, HashRouter } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Routes, Route, HashRouter } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-import Layout from './pages/Layout';
+import Layout from "./pages/Layout";
 
 //components
-import About from './components/About';
-import Home from './components/Home';
-import PokeList from './components/PokeList';
-import FavList from './components/FavList';
-import Pokesingle from './components/Pokesingle';
+import About from "./components/About";
+import Home from "./components/Home";
+import PokeList from "./components/PokeList";
+import FavList from "./components/FavList";
+import Pokesingle from "./components/Pokesingle";
 
 //styles
-import './styles/App.css';
+import "./styles/App.css";
 
 /*
 const RouterWrapper = (props) => {
@@ -29,7 +29,7 @@ const RouterWrapper = (props) => {
 function App() {
   const [data, setData] = useState();
 
-  let amount= 110;
+  let amount = 100;
   const url = `https://pokeapi.co/api/v2/pokemon?limit=${amount}&offset=0`;
 
   useEffect(() => {
@@ -39,29 +39,29 @@ function App() {
 
   const getData = async () => {
     await fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
-        const fetches = data.results.map( async (p) => {
-        const res = await fetch(p.url);
+      .then((res) => res.json())
+      .then((data) => {
+        const fetches = data.results.map(async (p) => {
+          const res = await fetch(p.url);
           return await res.json();
-    });
-    Promise.all(fetches).then((res)=>{
-        setData(res);
         });
-    });
-  }
+        Promise.all(fetches).then((res) => {
+          setData(res);
+        });
+      });
+  };
 
   return (
-    <HashRouter className="App"> 
-        <Routes>
-              <Route path="/" element={<Layout/>}>
-                <Route index element={<Home/>}></Route>
-                <Route path="about" element={<About/>}></Route> 
-                <Route path="pokeList" element={<PokeList data={data} />}></Route>               
-                <Route path="pokeList/:pokesingle" element={<Pokesingle/>}/>
-                <Route path="favList" element={<FavList/>}></Route>
-              </Route>       
-          </Routes>   
+    <HashRouter className="App">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />}></Route>
+          <Route path="about" element={<About />}></Route>
+          <Route path="pokeList" element={<PokeList data={data} />}></Route>
+          <Route path="pokeList/:pokesingle" element={<Pokesingle />} />
+          <Route path="favList" element={<FavList />}></Route>
+        </Route>
+      </Routes>
     </HashRouter>
   );
 }
