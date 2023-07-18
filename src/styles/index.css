@@ -101,33 +101,7 @@ main {
   color: azure;
   position: relative;
 }
-.all-pokes {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
 
-.search {
-  padding: 5px;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.searchInput {
-  padding: 0 10px;
-}
-
-.searchBtn {
-  width: 20px;
-  marging: 3px;
-}
-.cardMap {
-  display: flex;
-  flex-wrap: wrap;
-}
 .single-poke {
   color: rgb(119, 80, 2);
 }
